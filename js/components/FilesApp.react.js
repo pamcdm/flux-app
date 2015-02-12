@@ -26,7 +26,9 @@ var FilesApp = React.createClass({
     return (
       <div>
       <div>New Container</div>
+      <br/>
       <ContainerForm />
+      <br/>
       <div>My containers</div>
       <ContainerList allContainers={this.state.allContainers}/>
       </div>

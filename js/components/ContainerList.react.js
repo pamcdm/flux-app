@@ -6,9 +6,10 @@ var ContainerList = React.createClass({
     var allContainers = this.props.allContainers;
     var containers = [];
 
-    for (var key in allContainers) {
-      containers.push(<ContainerItem name={allContainers[key]} />);
-    }
+    var createItem = function(item) {
+      return <ContainerItem container={item} />;
+    };
+    containers = allContainers.map(createItem)
 
     return (
       <ul id="todo-list">{containers}</ul>
